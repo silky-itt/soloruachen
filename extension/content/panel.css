@@ -1,0 +1,173 @@
+/* Solo Code Floating Side Panel on LeetCode */
+
+#solo-code-sidepanel {
+  position: fixed;
+  top: 60px;
+  right: 16px;
+  width: 380px;
+  max-height: 80vh;
+  z-index: 999999;
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+}
+
+#solo-code-sidepanel.collapsed {
+  width: auto;
+  min-width: 140px;
+  max-height: 48px;
+  border-color: #334155;
+  background: #1e293b;
+}
+
+#solo-code-sidepanel.collapsed .solo-body,
+#solo-code-sidepanel.collapsed .solo-footer {
+  display: none !important;
+}
+
+.solo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(30, 41, 59, 0.8);
+  border-bottom: 1px solid #1e293b;
+  cursor: pointer;
+  user-select: none;
+}
+
+.solo-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.solo-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #38bdf8;
+  letter-spacing: 0.5px;
+}
+
+.solo-timer {
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: bold;
+  background: #020617;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  color: #fbbf24;
+}
+
+.solo-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.solo-btn-toggle {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.solo-btn-toggle:hover {
+  color: #fff;
+  background: #334155;
+}
+
+.solo-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.solo-alert {
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.solo-alert-warning {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fcd34d;
+}
+
+.solo-opponent-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.solo-opponent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.solo-shield-badge {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.solo-code-scroll {
+  max-height: 220px;
+  overflow-y: auto;
+  font-family: monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #cbd5e1;
+  background: #090d16;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #1e293b;
+  white-space: pre-wrap;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  user-select: none !important;
+}
+
+.solo-footer {
+  padding: 10px 14px;
+  background: rgba(30, 41, 59, 0.5);
+  border-top: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+.solo-link-btn {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.solo-link-btn:hover {
+  text-decoration: underline;
+}

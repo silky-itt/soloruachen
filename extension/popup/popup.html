@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Solo Code 1v1</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="header">
+      <div class="brand">
+        <span class="logo-badge">⚔️</span>
+        <div>
+          <h1 class="title">SOLO CODE</h1>
+          <p class="subtitle">1v1 LeetCode Companion</p>
+        </div>
+      </div>
+      <div id="status-chip" class="chip chip-offline">Chưa ghép nối</div>
+    </header>
+
+    <main class="content">
+      <!-- Section: Not Paired -->
+      <div id="unpaired-section" class="section">
+        <p class="instruction">
+          Nhập mã ghép nối 6 chữ số từ trang web Solo Code để liên kết trình duyệt:
+        </p>
+
+        <div class="input-group">
+          <input
+            type="text"
+            id="pairing-code-input"
+            placeholder="Ví dụ: 734-921"
+            maxlength="7"
+            autocomplete="off"
+          />
+          <button id="btn-pair" class="btn btn-primary">Ghép nối</button>
+        </div>
+        <p id="pair-error" class="error-text hidden"></p>
+
+        <div class="hint-box">
+          <p>💡 Không yêu cầu mật khẩu hoặc cookie. Mã ghép nối dùng một lần có hiệu lực 5 phút.</p>
+        </div>
+      </div>
+
+      <!-- Section: Paired -->
+      <div id="paired-section" class="section hidden">
+        <div class="card card-success">
+          <div class="card-icon">✓</div>
+          <div>
+            <div class="card-title">Đã kết nối với Web App</div>
+            <div id="paired-user" class="card-subtitle">Phiên người dùng: ---</div>
+          </div>
+        </div>
+
+        <div class="meta-list">
+          <div class="meta-row">
+            <span>LeetCode:</span>
+            <strong id="lc-username" class="mono">Đang kiểm tra...</strong>
+          </div>
+          <div class="meta-row">
+            <span>Phòng đấu:</span>
+            <strong id="current-room" class="mono">Chưa vào phòng</strong>
+          </div>
+          <div class="meta-row">
+            <span>Trạng thái trận:</span>
+            <strong id="match-status">Chờ sẵn sàng</strong>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button id="btn-open-web" class="btn btn-secondary">Mở Web Solo Code</button>
+          <button id="btn-disconnect" class="btn btn-danger">Ngắt kết nối</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span>Tương thích LeetCode UI 2025/2026</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

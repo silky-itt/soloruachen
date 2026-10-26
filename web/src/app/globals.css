@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000000;
+  --foreground: #f4f4f5;
+}
+
+* {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  color: var(--foreground);
+  background-color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* OLED dark scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Opponent read-only shield styling */
+.opponent-code-pane {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  position: relative;
+}
+
+.opponent-watermark {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.012),
+    rgba(255, 255, 255, 0.012) 30px,
+    transparent 30px,
+    transparent 60px
+  );
+}
+
+/* Subtle glowing pulse animations */
+@keyframes subtle-glow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-subtle-glow {
+  animation: subtle-glow 3s infinite ease-in-out;
+}
